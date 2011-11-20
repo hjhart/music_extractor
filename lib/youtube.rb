@@ -36,7 +36,7 @@ class Youtube
         :param => "--extract-audio"
       }, {
         :purpose => "Set audio format to mp3",
-        :param => "--audio-format mp3"
+        :param => "--audio-format #{@config['music_format']}"
       }, {
         :purpose => "Filename should be nice looking",
         :param => "-o '#{output_style}'"

@@ -43,13 +43,13 @@ Download multiple search terms (one search term per line in a text file)
 
 `download_movie` by default the movie file will be deleted. If you want to retain the movie and the music file, set this to true.
 
+`music_format` - by default this is set to mp3. You have the choice of: "aac", "vorbis" or "mp3"
 
 ## TODO:
 
 * Configurable video types/qualities
 * download a file based on a search term best result
 * Figure out a "best result" algorithm for youtube
-* seperate config out into templates
 * mkdir_p the destination directory?
-* configurable audio export type
 * Edit meta data (upon importing into iTunes we should get an artist and a title at least - perhaps a year and genre - query allmusic from mashable?)
+* download N number of search_term videos (e.g. rake search_multiple["Cold War Kids", 15] would download 15 songs from Cold War Kids)

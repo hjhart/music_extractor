@@ -1,3 +1,4 @@
 ---
 destination_directory: tmp
 download_movie: false
+music_format: mp3
