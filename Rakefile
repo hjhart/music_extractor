@@ -8,7 +8,7 @@ task :download, :url do |t, args|
   downloader.search_for_url args[:url]
 end
 
-desc "Take a file of urls and download it from youtube."
+desc "Take a file of url and/or search terms and download it from youtube."
 task :download_file, :filename do |t, args|
   downloader = Youtube.new
   File.open(args[:filename], "r").each do |line|
