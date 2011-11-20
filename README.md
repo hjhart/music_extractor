@@ -28,7 +28,14 @@ Download a single URL
 Download multiple urls (one url per line in a text file)
 
 	rake download_file["urls.txt"]
+	
+Download using a search term (only on youtube)
 
+	rake search["Michael Jackson - Thriller"]
+	
+Download multiple search terms (one search term per line in a text file)
+
+	rake search_file["search_terms.txt"]
 
 ## Configuration
 
@@ -44,3 +51,5 @@ Download multiple urls (one url per line in a text file)
 * Figure out a "best result" algorithm for youtube
 * seperate config out into templates
 * mkdir_p the destination directory?
+* configurable audio export type
+* Edit meta data (upon importing into iTunes we should get an artist and a title at least - perhaps a year and genre - query allmusic from mashable?)
