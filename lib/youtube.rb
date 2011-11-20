@@ -9,13 +9,15 @@ class Youtube
 
   def search_for_string search_term
     search_term.gsub!(/'/, '') 
-    exclusion_search_terms = ['live']
-    # exclusion_string = exclusion_search_terms.inject("") { |term| 
+    exclusion_search_terms = ['live', 'karaoke']
+    exclusion_string = exclusion_search_terms.inject("") { |memo, term| memo += " -#{term}" }
     options = construct_options {{
       :purpose => "The search term parameter",
-      :param => "'ytsearch:#{search_term}'"
+      :param => "'ytsearch:#{search_term} #{exclusion_string}'"
     }}
     execute_with options
+    
+    
   end
   
   def search_for_url url

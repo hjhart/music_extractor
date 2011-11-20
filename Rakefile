@@ -18,7 +18,7 @@ end
 
 desc "Take a string and search/download it on youtube."
 task :search, :search_term do |t, args|
-  search_term = args[:search_term].chomp.split
+  search_term = args[:search_term].chomp.strip
   downloader = Youtube.new
   downloader.search_for_string search_term
 end
