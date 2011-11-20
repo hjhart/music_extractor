@@ -1,5 +1,6 @@
 $:.push('lib')
 require 'youtube'
+require 'uri'
 
 desc "Take a url and download it from youtube."
 task :download, :url do |t, args|
@@ -11,8 +12,15 @@ desc "Take a file of urls and download it from youtube."
 task :download_file, :filename do |t, args|
   downloader = Youtube.new
   File.open(args[:filename], "r").each do |line|
-    url = line.chomp.strip
-    downloader.search_for_url url
+    line = line.chomp.strip
+    url = URI.extract(line)
+    is_url = url.size > 0
+    if is_url
+      downloader.search_for_url url.first
+    else
+      search_term = line
+      downloader.search_for_string search_term
+    end
   end
 end
 
@@ -21,15 +29,6 @@ task :search, :search_term do |t, args|
   search_term = args[:search_term].chomp.strip
   downloader = Youtube.new
   downloader.search_for_string search_term
-end
-
-desc "Take a file of search terms and download it from youtube."
-task :search_file, :filename do |t, args|
-  downloader = Youtube.new
-  File.open(args[:filename], "r").each do |line|
-    search_term = line.chomp.strip
-    downloader.search_for_string search_term
-  end
 end
 
 desc "Create a working copy of the config file."

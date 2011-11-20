@@ -25,17 +25,14 @@ Download a single URL
 
 	rake download["http://www.youtube.com/watch?v=xNQ5fj9uqVo"]
 	
-Download multiple urls (one url per line in a text file)
-
-	rake download_file["urls.txt"]
-	
 Download using a search term (only on youtube)
 
 	rake search["Michael Jackson - Thriller"]
 	
-Download multiple search terms (one search term per line in a text file)
+Download from a file: One "video" per line on the file. The lines can be either urls or search terms. There is a test file checked in at `test.txt`. Make sure your links all start with `http://`
 
-	rake search_file["search_terms.txt"]
+	rake download_file["test.txt"]
+
 
 ## Configuration
 
