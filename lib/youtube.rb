@@ -16,8 +16,6 @@ class Youtube
       :param => "'ytsearch:#{search_term} #{exclusion_string}'"
     }}
     execute_with options
-    
-    
   end
   
   def search_for_url url

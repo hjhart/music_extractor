@@ -2,7 +2,7 @@ $:.push('lib')
 require 'youtube'
 
 desc "Take a url and download it from youtube."
-task :download_url, :url do |t, args|
+task :download, :url do |t, args|
   downloader = Youtube.new
   downloader.search_for_url args[:url]
 end

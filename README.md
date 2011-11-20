@@ -23,7 +23,7 @@ Copy over config file. This rake task will create a config.yml. Use the configur
 
 Download a single URL
 
-	rake download_url["http://www.youtube.com/watch?v=xNQ5fj9uqVo"]
+	rake download["http://www.youtube.com/watch?v=xNQ5fj9uqVo"]
 	
 Download multiple urls (one url per line in a text file)
 
