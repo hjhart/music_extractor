@@ -13,6 +13,8 @@ task :download_file, :filename do |t, args|
   downloader = Youtube.new
   File.open(args[:filename], "r").each do |line|
     line = line.chomp.strip
+    next if line.empty?
+    
     url = URI.extract(line)
     is_url = url.size > 0
     if is_url
