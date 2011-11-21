@@ -2,3 +2,5 @@
 destination_directory: tmp
 download_movie: false
 music_format: mp3
+matched_directory: tmp/matched
+move_after_matching: true

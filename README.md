@@ -50,3 +50,9 @@ Download from a file: One "video" per line on the file. The lines can be either 
 * mkdir_p the destination directory?
 * Edit meta data (upon importing into iTunes we should get an artist and a title at least - perhaps a year and genre - query allmusic from mashable?)
 * download N number of search_term videos (e.g. rake search_multiple["Cold War Kids", 15] would download 15 songs from Cold War Kids)
+
+## Metadata installation:
+
+We need a C package called libtag. Installation instructions [here](https://github.com/robinst/taglib-ruby)
+
+

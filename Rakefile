@@ -1,5 +1,5 @@
 $:.push('lib')
-require 'youtube'
+require 'music_extractor'
 require 'uri'
 
 desc "Take a url and download it from youtube."
@@ -41,6 +41,11 @@ task :init do
     FileUtils.copy(config_templpate, target_config_file) 
     puts "Creating working config file..."
   end
+end
+
+desc "Populate the id3 tags"
+task :tag do
+  MetadataCleaner.tag_files
 end
 
 desc "Loads up a console environment"
