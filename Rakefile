@@ -42,3 +42,8 @@ task :init do
     puts "Creating working config file..."
   end
 end
+
+desc "Loads up a console environment"
+task :console do
+  exec "irb -I lib -r music_extractor"
+end
