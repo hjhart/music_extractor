@@ -50,6 +50,10 @@ Download from a file: One "video" per line on the file. The lines can be either 
 * mkdir_p the destination directory?
 * Edit meta data (upon importing into iTunes we should get an artist and a title at least - perhaps a year and genre - query allmusic from mashable?)
 * download N number of search_term videos (e.g. rake search_multiple["Cold War Kids", 15] would download 15 songs from Cold War Kids)
+* Update instructiosn on how to install metadata stuff
+* Update instructions on best practices for tagging (artist - title.mp3 naming, etc...)
+* Just general best practices.
+
 
 ## Metadata installation:
 
